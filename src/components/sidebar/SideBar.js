@@ -45,7 +45,9 @@ function SideBar(props) {
                                     <IoLogoBuffer size="1.25rem" /> Products <IoCaretDown />
                                 </div>
                                 <ul>
-                                    <li>Add New Product</li>
+                                    <Link to="/dashboardpage" style={{ textDecoration: 'none', color: '#fff' }}><li>View All Products</li></Link>
+                                    <Link to="add" style={{ textDecoration: 'none', color: '#fff' }}><li>Add New Product</li></Link>
+                                    <Link to="edit" style={{ textDecoration: 'none', color: '#fff' }}><li>Edit Product</li></Link>
                                 </ul>
                             </li>
                             <li>
@@ -85,7 +87,7 @@ function SideBar(props) {
                                     <IoAnalyticsOutline size="1.25rem" /> Sales
                                 </div>
                             </li>
-                            <li className="sign-out-sidebar" onClick={onLogOutRequest}>
+                            <li className="sign-out-sidebar" style={{ cursor: 'pointer' }} onClick={onLogOutRequest}>
                                 <div className="flex-sidebar">
                                     <IoLogOutOutline size="1.25rem" /> Sign Out
                                 </div>

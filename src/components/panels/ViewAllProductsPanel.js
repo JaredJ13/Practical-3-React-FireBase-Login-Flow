@@ -1,15 +1,15 @@
 import React from "react";
 
-function Panel(props) {
+function ViewAllProductsPanel(props) {
     return (
         <>
             <section className="panel-section">
                 <div className="panel-wrapper">
-                    <h2>Product Listings</h2>
+                    <h2>All Products</h2>
                 </div>
             </section>
         </>
     )
 }
 
-export default Panel
+export default ViewAllProductsPanel
