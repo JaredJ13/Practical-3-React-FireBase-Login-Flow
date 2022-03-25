@@ -1,30 +1,66 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+
 import Logo from '../img/logo.jpg'
 import LoginImg from '../img/login-page-big.jpg'
-import { Link } from "react-router-dom"
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { auth } from './../libs/firebase/index'
+import { signInWithEmailAndPassword } from 'firebase/auth'
+
 
 
 function LoginPage(props) {
+    const navigator = useNavigate()
+
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+
+    const notify = (error) => toast.error(error.code, {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+    })
+
+    function onLoginRequest(e) {
+        e.preventDefault()
+
+        signInWithEmailAndPassword(auth, email, password)
+            .then(userCredential => {
+                navigator('/dashboardpage')
+                console.log(userCredential)
+            })
+            .catch(error => {
+                notify(error)
+            })
+    }
+
     return (
         <>
             <section>
+                <ToastContainer />
                 <div className='inner-container'>
                     <div className='login-wrapper flex'>
                         <div className='half-1'>
                             <div class="form-wrapper">
                                 <img src={Logo} alt='dog bone toy' />
                                 <h1>Sign In</h1>
-                                <form>
+                                <form onSubmit={onLoginRequest}>
                                     <div className='form-item'>
                                         <label htmlFor="email"></label>
-                                        <input type="email" name="email" required="required" placeholder="Email Address"></input>
+                                        <input type="email" name="email" required="required" placeholder="Email Address" onChange={(e) => setEmail(e.target.value)}></input>
                                     </div>
                                     <div className="form-item">
                                         <label htmlFor="password"></label>
-                                        <input type="password" name="password" required="required" placeholder="Password"></input>
+                                        <input type="password" name="password" required="required" placeholder="Password" onChange={(e) => setPassword(e.target.value)}></input>
                                     </div>
                                     <div className="button-panel">
-                                        <Link to="/DashBoardPage"><input type="submit" class="button" title="Sign In" value="Sign In"></input></Link>
+                                        <input type="submit" class="button" title="Sign In" value="Sign In"></input>
                                     </div>
                                 </form>
                                 <div className="form-footer">

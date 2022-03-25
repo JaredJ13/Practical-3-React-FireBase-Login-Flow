@@ -205,6 +205,7 @@ header{
   .sidebar-section{
     width: 13rem;
     background-color: #e79857;
+    border-right: 1px solid black;
   }
 
   .container{
@@ -213,7 +214,6 @@ header{
   }
   .sidebar-wrapper{
     height: 100%;
-    border-right: 1px solid black;
   }
 
   .sidebar-wrapper > ul{
@@ -280,22 +280,47 @@ header{
   /*  */
   /* 404 PAGE NOT FOUND */
   /*  */
+  .page-nf-background li{
+    list-style: none;
+    font-size: 18px;
+    width: 8rem;
+    padding: 0.25rem;
+    margin-left: 2.5rem;
+    background-color: #000000;
+    border: 1px solid black;
+    border-radius: 3px;
+    text-align: center;
+  }
+
+  .page-nf-background li:hover{
+    color: #b0e3f7;
+  }
+
+  .pnf-box{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    width: 300px;
+    text-align: left;
+  }
+
   .page-nf-background{
-    background-color: #f7f3f3;
+    position: relative;
+    background-color: #ffffff;
     width: 100vw;
     height: 100vh;
   }
 
   .page-nf-background img{
-    width: 100%;
+    position: absolute;
+    top: -1rem;
+    width: 100vw;
   }
 
   .page-nf-background h1{
-    position: relative;
-    top: 15rem;
     z-index: 1000;
     text-align: center;
-    color: #6a787e;
+    color: #ffffff;
   }
 
   /*  */
