@@ -33,6 +33,8 @@ header{
     margin: 8rem auto 0 auto;
     box-shadow: 0.1rem 0rem 0.8rem #b1ada8;
     width: 75vw;
+    max-width: 900px;
+    max-height: 405px;
 }
 
 .half-1{
@@ -50,6 +52,7 @@ header{
   /* Form Layout */
   .form-wrapper {
     background: #fafafa;
+    max-height: 405px;
   }
 
   .half-2 img{
@@ -171,7 +174,7 @@ header{
   .appbar-wrapper{
     justify-content: space-between;
     align-content: center;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(82, 78, 78);
     padding: 0.75rem;
     width: 100%;
     margin: 0 auto;
@@ -187,7 +190,6 @@ header{
 
   .appbar-brand p{
     color: rgb(255, 255, 255);
-    border-bottom: 1px solid rgb(255, 255, 255);
     padding-bottom: 0.2rem;
   }
 
@@ -205,7 +207,7 @@ header{
   .sidebar-section{
     width: 13rem;
     background-color: #e79857;
-    border-right: 1px solid black;
+    border-right: 1px solid rgb(82, 78, 78);
   }
 
   .container{
@@ -217,7 +219,7 @@ header{
   }
 
   .sidebar-wrapper > ul{
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(82, 78, 78);
     list-style: none;
     margin-top: 1rem;
     padding-bottom: 1rem;
@@ -258,6 +260,7 @@ header{
   .sign-out-sidebar a{
     color: #ffffff;
     text-decoration: none;
+    cursor: pointer;
   }
 
 
