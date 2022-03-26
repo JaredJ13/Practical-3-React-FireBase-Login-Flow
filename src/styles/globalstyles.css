@@ -267,10 +267,11 @@ header{
   /* Panel */
 
   .panel-section{
-    width: 75%;
+    width: 100%;
     height: 100vh;
     margin: 0.5rem auto;
-    background-color: #e2e9ec;
+    margin-left: 0.75rem;
+    background-color: #f1efef;
     border-radius: 4px;
   }
 
@@ -325,6 +326,116 @@ header{
     text-align: center;
     color: #ffffff;
   }
+
+  /* Product Card */
+  .product-card {
+    /* flex: 0 1 40%; */
+    width: 250px;
+    position: relative;
+    box-shadow: 0 3px 3px #dfd9d5;
+    margin: 25px auto;
+    background: #fafafa;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.product-tumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    padding: 0px;
+    background: #ffffff;
+    border-radius: 8px;
+}
+
+.product-tumb img {
+    max-width: 100%;
+    max-height: 100%;
+    padding: 0.5rem;
+}
+
+.product-details {
+    padding: 30px;
+    height: 230px;
+    background-color: #d3d3d3;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.product-category {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgb(124, 121, 121);
+    margin-bottom: 18px;
+}
+
+.product-details h4 a {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+    color: #000000;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.product-details h4{
+  color: #000000;
+}
+
+.product-details h4 a:hover {
+    color: #658ac2;
+}
+
+.product-details p {
+    font-size: 15px;
+    line-height: 22px;
+    margin-bottom: 18px;
+    color: rgb(66, 66, 66);
+}
+
+.product-bottom-details {
+    overflow: hidden;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.product-bottom-details div {
+    float: left;
+    width: 50%;
+}
+
+.product-price {
+    font-size: 18px;
+    color: black;
+    font-weight: 600;
+}
+
+.product-links {
+    text-align: right;
+}
+
+.product-links a {
+    display: inline-block;
+    margin-left: 5px;
+    color: #000000;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+.product-links a:first-of-type:hover {
+    color: #4c9bbb;
+}
+
+.product-links a:last-of-type:hover {
+    color: #be3636;
+    cursor: pointer;
+}
 
   /*  */
   /* Media Queries */
