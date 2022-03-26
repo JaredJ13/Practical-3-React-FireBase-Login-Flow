@@ -40,5 +40,5 @@ Inspiration, code snippets, etc.
 * [@mdshifut - product card](https://codepen.io/mdshifut/pen/VrwBJq)
 
 ## Netlify Site Status
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/553a037e-a5ef-4511-836e-5b8d7e8ecdbc/deploy-status)](https://app.netlify.com/sites/happydogaccesories/deploys)
 
